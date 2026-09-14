@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v1.0.0/Glance-Plex-v1.0.0-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v1.0.0/Glance-Plex-v1.0.0-Setup.exe",
+  "installer_sha256": "b92787eec31c580fdab05e22593b1024d8c8f4d54120c1212cd2b0ea80bf5f40",
+  "changelog": "First release: local Plex activity widget, amber icon, Windows installer, and portable ZIP. Updates are manual.",
+  "sha256": "6e49e6a5df5579c0af7612235684393d110d41a9bb3a2c14d94010c043ab2a3b"
+}
