@@ -4,23 +4,29 @@ A compact Windows desktop widget that shows who is watching your Plex server, wh
 
 **[Download the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest)** · [Setup guide](USER_GUIDE.md) · [Report an issue](https://github.com/Brusko25/Glance-Plex-Releases/issues)
 
-Choose the Windows installer or portable ZIP. Requires Windows 10/11 x64 compatible, .NET Framework 4.8, and Plex Media Server running under the same Windows account on the default local port. Builds are unsigned. Updates are manual.
+Choose the Windows installer or portable ZIP. Requires Windows 10/11 x64 compatible, .NET Framework 4.8, and Plex Media Server running under the same Windows account on the default local port. Builds are unsigned. Update installation remains manual.
 
 ## Screenshots
 
-Captured from Glance Plex 1.0.0. These previews use fictional sample activity; no personal account data is included. Click an image for full size.
+Captured from Glance Plex 1.0.1. These previews use fictional sample activity; no personal account data is included. Click an image for full size.
 
 **Playing and paused streams** — usernames, titles, devices, and progress.
 
-[![Glance Plex showing two sample streams, one playing and one paused](images/1.0.0/activity.png)](images/1.0.0/activity.png)
+[![Glance Plex showing two sample streams, one playing and one paused](images/1.0.1/activity.png)](images/1.0.1/activity.png)
 
 **Idle server** — a successful connection with no active sessions.
 
-[![Glance Plex idle state](images/1.0.0/idle.png)](images/1.0.0/idle.png)
+[![Glance Plex idle state](images/1.0.1/idle.png)](images/1.0.1/idle.png)
 
 **Connection unavailable** — previous activity clearly marked as last known.
 
-[![Glance Plex offline state with sample last-known activity](images/1.0.0/offline.png)](images/1.0.0/offline.png)
+[![Glance Plex offline state with sample last-known activity](images/1.0.1/offline.png)](images/1.0.1/offline.png)
+
+## New in 1.0.1
+
+The app checks its public GitHub releases shortly after startup and daily. Choose **Check for updates** from the widget or tray menu to check immediately. When a newer stable version is available, you can open the release page. Downloads and installation remain manual; update checks send no account credentials or workspace data.
+
+Live activity captures are clearly labeled and blocked from screenshot publication folders. Parsing failures retain their underlying error for troubleshooting.
 
 ## Features
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 — 2026-09-15
+
+- Detect newer stable releases at startup and daily; add manual update checks and optional links to the product download page.
+
+- Guard live activity captures with a required live- filename, block publication image folders, and label them LIVE · DO NOT PUBLISH.
+- Preserve Plex XML parsing errors with their original cause for troubleshooting.
+
 ## 1.0.0
 
 - First release of Glance Plex for Windows 10/11 with .NET Framework 4.8.
