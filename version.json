@@ -1,8 +1,8 @@
 {
-  "version": "1.0.1",
-  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v1.0.1/Glance-Plex-v1.0.1-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v1.0.1/Glance-Plex-v1.0.1-Setup.exe",
-  "installer_sha256": "97ad63db4deaaeff5c440531260071546094241a5fd89a96a72991f6019165db",
-  "changelog": "Detect newer stable releases at startup and daily, with manual checks and optional links to downloads. Installation remains manual and existing settings are preserved. Live capture publishing guards and clearer parsing errors are included.",
-  "sha256": "b62fbefe8526ed32fbe81c7d3340b871799852061362c45a1a1ba11bafd412d7"
+  "version": "1.1.0",
+  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v1.1.0/Glance-Plex-v1.1.0-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v1.1.0/Glance-Plex-v1.1.0-Setup.exe",
+  "installer_sha256": "8167f35ff32359347c52afcf06ba9f471f0988da4cdda5d1a9bda96a60260726",
+  "changelog": "Optional Windows Tdarr playback protection, adjustable resume delay, CPU/GPU indicators, connection options, local viewing history, and verified in-app updates.",
+  "sha256": "84446e45312860aff581fb7ba89b2d623abe2eb4714d3e80c9b2988d08a75bcc"
 }
