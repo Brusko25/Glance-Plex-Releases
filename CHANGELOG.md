@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0 — 2026-09-21
+
+- Optional immediate suspension of local Windows Tdarr encoders during Plex playback, with a separate recovery helper. Queue-only mode and node selection are also available.
+- CPU/GPU status lights and an adjustable idle delay, defaulting to five minutes.
+- Options window for playback filters, connection tests, encrypted manual credentials, widget appearance, and activity history.
+- Local viewing history with observed playing time, search, retention, recording toggle, and clear control.
+- In-app verified updates for installed and portable copies; preserve settings/history and release Glance-owned Tdarr pauses before replacement.
+
+
 ## 1.0.1 — 2026-09-15
 
 - Detect newer stable releases at startup and daily; add manual update checks and optional links to the product download page.
@@ -17,4 +26,4 @@
 - Original amber activity icon embedded in the app and installer.
 - Per-user installer with optional desktop shortcut and Windows startup, plus portable ZIP.
 
-Updates are manual. No automatic updater is included.
+Version 1.0.0 required manual update installation.

@@ -1,41 +1,48 @@
 # Glance Plex
 
-A compact Windows desktop widget that shows who is watching your Plex server, what they are playing, and playback progress. Connects automatically to Plex Media Server on the same PC.
+A compact Windows widget showing who is watching Plex and what they are playing, with optional Tdarr playback protection and local viewing history.
 
 **[Download the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest)** · [Setup guide](USER_GUIDE.md) · [Report an issue](https://github.com/Brusko25/Glance-Plex-Releases/issues)
 
-Choose the Windows installer or portable ZIP. Requires Windows 10/11 x64 compatible, .NET Framework 4.8, and Plex Media Server running under the same Windows account on the default local port. Builds are unsigned. Update installation remains manual.
+Choose the installer or portable ZIP. Requires Windows 10/11 x64 compatible and .NET Framework 4.8. Same-account Windows Plex connects automatically; Options supports custom connections. Tdarr integration is optional, starts off, and supports local Windows encoder suspension or API queue control. Builds are unsigned.
 
 ## Screenshots
 
-Captured from Glance Plex 1.0.1. These previews use fictional sample activity; no personal account data is included. Click an image for full size.
+Captured from **1.1.0**, using fictional activity and explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
 
-**Playing and paused streams** — usernames, titles, devices, and progress.
+**Live stream view with CPU/GPU worker lights**
 
-[![Glance Plex showing two sample streams, one playing and one paused](images/1.0.1/activity.png)](images/1.0.1/activity.png)
+[![Sample Plex streams and Tdarr worker indicators](images/1.1.0/activity.png)](images/1.1.0/activity.png)
 
-**Idle server** — a successful connection with no active sessions.
+**Playback protection and adjustable resume delay**
 
-[![Glance Plex idle state](images/1.0.1/idle.png)](images/1.0.1/idle.png)
+[![Glance Plex playback options](images/1.1.0/options.png)](images/1.1.0/options.png)
 
-**Connection unavailable** — previous activity clearly marked as last known.
+**Local viewing history**
 
-[![Glance Plex offline state with sample last-known activity](images/1.0.1/offline.png)](images/1.0.1/offline.png)
+[![Fictional viewing records with times and durations](images/1.1.0/history.png)](images/1.1.0/history.png)
 
-## New in 1.0.1
+**Suspended encoders, idle server, and unavailable connection**
 
-The app checks its public GitHub releases shortly after startup and daily. Choose **Check for updates** from the widget or tray menu to check immediately. When a newer stable version is available, you can open the release page. Downloads and installation remain manual; update checks send no account credentials or workspace data.
+[![Suspended Tdarr indicators](images/1.1.0/tdarr-paused.png)](images/1.1.0/tdarr-paused.png)
+[![Idle Plex server](images/1.1.0/idle.png)](images/1.1.0/idle.png)
+[![Unavailable Plex connection with last-known samples](images/1.1.0/offline.png)](images/1.1.0/offline.png)
 
-Live activity captures are clearly labeled and blocked from screenshot publication folders. Parsing failures retain their underlying error for troubleshooting.
+**Connection setup and widget options**
 
-## Features
+[![Tdarr server, API key and queue setup](images/1.1.0/tdarr-connection.png)](images/1.1.0/tdarr-connection.png)
+[![Plex connection setup](images/1.1.0/plex-connection.png)](images/1.1.0/plex-connection.png)
+[![Widget appearance and update options](images/1.1.0/widget-options.png)](images/1.1.0/widget-options.png)
 
-- Active stream count with distinct playing and paused status.
-- Viewer, movie or episode, playback device, progress, and playback method when available.
-- Automatic local Plex connection and refresh every 10 seconds by default.
-- Draggable widget, system tray, adjustable opacity, always on top, and position lock.
-- Optional desktop shortcut and Windows startup in the installer.
+## New in 1.1.0
 
-The token stays on your PC and is sent only to your local Plex server. No credentials, user settings, real activity screenshots, or application source are shipped in this public repository.
+- Pause local Tdarr encoders when Plex playback is detected; resume after five idle minutes by default, adjustable from 0–60 minutes. Includes recovery helper, queue selection, playback filters, and an off switch.
+- CPU/GPU worker status lights, configurable Plex/Tdarr addresses, credential fields, and read-only connection/access tests.
+- Searchable local activity history with observed viewing duration, retention, recording toggle and clear control.
+- **Update now** downloads, verifies, installs and restarts while preserving settings/history. Installed and portable copies are supported. Upgrade from 1.0.1 manually once to get this feature.
 
-This repository hosts public documentation, screenshots, downloads, and checksums. Application source and development history are maintained privately. Glance Plex is an independent utility and is not affiliated with Plex.
+Immediate suspension requires accessible native Windows Tdarr processes on the same PC. Queue-only mode supports other API-connected nodes while current jobs finish. Tested with Windows Tdarr 2.89.01; see the guide for compatibility and process-permission limits. Duration records cover only activity observed while Glance runs.
+
+Downloads contain only the app and documentation. Never share your running app folder: its local data includes private history and account-encrypted credentials. Update requests send no activity or credentials to GitHub.
+
+This public repository hosts documentation, screenshots, downloads and checksums. Source and development history remain private. Glance Plex is independent and not affiliated with Plex or Tdarr.
