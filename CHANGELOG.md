@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1 — 2026-09-21
+
+- Redesign Options to match Glance Finance: navy panels, amber accents, rounded cards, and clear navigation.
+- Replace white inputs with dark fields and toggle switches; keep Save changes and Cancel visible.
+- Add a compact activity toolbar, dark history table, and resizable two-column settings pages.
+- Support opening Options directly with `GlancePlex.exe --options`.
+
+
 ## 1.1.0 — 2026-09-21
 
 - Optional immediate suspension of local Windows Tdarr encoders during Plex playback, with a separate recovery helper. Queue-only mode and node selection are also available.

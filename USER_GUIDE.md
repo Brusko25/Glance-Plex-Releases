@@ -2,7 +2,7 @@
 
 ## Install and connect
 
-Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **1.1.0 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
+Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **1.1.1 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
 
 Plex Media Server on this PC, signed in under the same Windows account, connects automatically at `http://127.0.0.1:32400`. Right-click the widget → **Options → Plex connection** to change the address or port, supply a server-owner token for a different account/server, and test the connection. Automatic Windows sign-in is restricted to loopback addresses. Manual tokens are encrypted for the current Windows account; use HTTPS for connections across untrusted networks.
 
@@ -10,7 +10,7 @@ Plex Media Server on this PC, signed in under the same Windows account, connects
 
 Tdarr integration is optional and automatic pausing starts **off** on a fresh installation. Open **Options → Tdarr connection**, then **Test connection / load nodes**. The default server API URL is `http://127.0.0.1:8266`; change it if needed and enter your Tdarr API key if authentication is enabled. Select all queues or individual nodes.
 
-In **Tdarr & playback**, enable **Pause Tdarr while someone is watching Plex**. With **Suspend current local encodes immediately** checked, Glance suspends running FFmpeg/HandBrakeCLI processes descended from Windows Tdarr Node processes and pauses selected queues. It leaves Plex's own transcoder alone. Detection happens at the next Plex refresh (10 seconds by default), then the encoder guard checks every second. It includes Tdarr encoding health checks.
+In **Playback**, enable **Pause Tdarr while someone is watching Plex**. With **Suspend current local encodes immediately** checked, Glance suspends running FFmpeg/HandBrakeCLI processes descended from Windows Tdarr Node processes and pauses selected queues. It leaves Plex's own transcoder alone. Detection happens at the next Plex refresh (10 seconds by default), then the encoder guard checks every second. It includes Tdarr encoding health checks.
 
 Immediate mode affects **all Tdarr encoders on this PC**, regardless of queue selection. Run Glance under the same Windows account and privilege level as Tdarr; use **Check local encoder access** while encoding to verify access. Installation paths are discovered, so no personal folder is hardcoded. Tested against Windows Tdarr 2.89.01; other versions must expose compatible v2 node endpoints and Windows process names (`Tdarr_Node.exe` / `Tdarr_Node_Rust.exe`). Docker, WSL, remote encoders, and other process names cannot be suspended by this feature.
 
@@ -35,7 +35,7 @@ History is recorded locally only while Glance runs. Playing duration is an estim
 
 ## Options and controls
 
-Right-click → **Options** organizes playback protection, Tdarr connection, Plex connection, Activity, and Widget preferences. Options stay open while monitoring continues; Save applies changes. Drag the widget to move, F5 refreshes, Escape hides, and double-clicking the tray icon reveals it. Choose opacity, always on top, position lock, and a 5–60 second refresh interval. Failed Plex requests retry after at least 30 seconds.
+Right-click → **Options** organizes playback protection, Tdarr connection, Plex connection, Activity, and Widget preferences. The resizable window uses dark cards, toggle switches, and a searchable history table. Monitoring continues while it is open; Save changes applies your settings. Drag the widget to move, F5 refreshes, Escape hides, and double-clicking the tray icon reveals it. Choose opacity, always on top, position lock, and a 5–60 second refresh interval. Failed Plex requests retry after at least 30 seconds.
 
 ## Updates and uninstall
 
