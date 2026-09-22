@@ -2,7 +2,7 @@
 
 ## Install and connect
 
-Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **2.1.0 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
+Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **2.2.0 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
 
 Plex Media Server on this PC, signed in under the same Windows account, connects automatically at `http://127.0.0.1:32400`. Right-click the widget → **Options → Plex connection** to change the address or port, supply a server-owner token for a different account/server, and test the connection. Automatic Windows sign-in is restricted to loopback addresses. Manual tokens are encrypted for the current Windows account; use HTTPS for connections across untrusted networks.
 
@@ -22,7 +22,9 @@ Queues already paused before Glance takes control remain paused. For queues Glan
 
 ## Read the widget
 
-- Green CPU/GPU lights indicate busy Tdarr transcode workers, not hardware utilization percentages. Red means idle or confirmed suspended. Gray means unavailable, suspension pending, or ambiguous remote status. Health-check workers are excluded from the counts.
+- Green CPU/GPU lights with **Working** indicate busy Tdarr transcode workers. Red with **Idle** means idle or confirmed suspended. Gray with **Unknown** means unavailable, suspension pending, or ambiguous remote status. Health-check workers are excluded from the counts.
+- The percentages beside those labels show **overall usage on this PC**, including Plex and other apps, updated every two seconds. They do not measure only Tdarr or a remote node. CPU is total processor busy time; GPU is the busiest engine across local adapters, including video encoding, decoding, compute and 3D. An idle Tdarr worker can still have a nonzero hardware percentage.
+- A dash (**—**) means the hardware reading is warming up, unavailable, or stale. GPU readings require working Windows GPU Engine performance counters and a compatible display driver; unsupported counters do not display a false zero. Monitoring uses Windows counters without vendor utilities or administrator prompts.
 - Hover for counts, suspension status, and connection errors. Remote jobs may continue while local encoders are suspended.
 - Active Plex rows show user, title/episode, device, playing/paused state, playback method, and progress. Scroll for more rows.
 - **Nobody is watching** means Plex successfully returned no sessions. **Activity unavailable** means the last known rows may be stale; it is never treated as proof that playback stopped.

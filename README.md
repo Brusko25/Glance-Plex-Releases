@@ -8,37 +8,39 @@ Choose the installer or portable ZIP. Requires Windows 10/11 x64 compatible and 
 
 ## Screenshots
 
-Captured from **2.1.0**, using fictional activity and explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
+Captured from **2.2.0**, using fictional activity and sample hardware percentages, explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
 
-**Live stream view with CPU/GPU worker lights**
+**Live stream view with CPU/GPU status and percentages**
 
-[![Sample Plex streams and Tdarr worker indicators](images/2.1.0/activity.png)](images/2.1.0/activity.png)
+[![Sample Plex streams, Tdarr status and hardware percentages](images/2.2.0/activity.png)](images/2.2.0/activity.png)
 
 **Playback protection and adjustable resume delay**
 
-[![Glance Plex playback options](images/2.1.0/options.png)](images/2.1.0/options.png)
+[![Glance Plex playback options](images/2.2.0/options.png)](images/2.2.0/options.png)
 
 **Local viewing history**
 
-[![Fictional viewing records with times and durations](images/2.1.0/history.png)](images/2.1.0/history.png)
+[![Fictional viewing records with times and durations](images/2.2.0/history.png)](images/2.2.0/history.png)
 
 **Suspended encoders, idle server, and unavailable connection**
 
-[![Suspended Tdarr indicators](images/2.1.0/tdarr-paused.png)](images/2.1.0/tdarr-paused.png)
-[![Idle Plex server](images/2.1.0/idle.png)](images/2.1.0/idle.png)
-[![Unavailable Plex connection with last-known samples](images/2.1.0/offline.png)](images/2.1.0/offline.png)
+[![Suspended Tdarr indicators](images/2.2.0/tdarr-paused.png)](images/2.2.0/tdarr-paused.png)
+[![Idle Plex server](images/2.2.0/idle.png)](images/2.2.0/idle.png)
+[![Unavailable Plex connection with last-known samples](images/2.2.0/offline.png)](images/2.2.0/offline.png)
 
 **Connection setup and widget options**
 
-[![Tdarr server, API key and queue setup](images/2.1.0/tdarr-connection.png)](images/2.1.0/tdarr-connection.png)
-[![Plex connection setup](images/2.1.0/plex-connection.png)](images/2.1.0/plex-connection.png)
-[![Widget appearance and update options](images/2.1.0/widget-options.png)](images/2.1.0/widget-options.png)
+[![Tdarr server, API key and queue setup](images/2.2.0/tdarr-connection.png)](images/2.2.0/tdarr-connection.png)
+[![Plex connection setup](images/2.2.0/plex-connection.png)](images/2.2.0/plex-connection.png)
+[![Widget appearance and update options](images/2.2.0/widget-options.png)](images/2.2.0/widget-options.png)
 
-## New in 2.1.0
+## New in 2.2.0
 
-Drag Plex beside other compatible Glance widgets to align their edges. **Snap to Glance widgets** is enabled by default in **Options → Widget**, with free dragging available when switched off. Locked widgets remain anchors. The widget also matches Finance’s thin gray border and rounded corners.
+The widget now shows its app icon and **Glance Plex** name, with a cleaner idle view. Larger CPU and GPU rows show **Working** beside green lights and **Idle** beside red lights, plus live hardware percentages.
 
-Both apps need shared snapping protocol v1; older Glance versions without it do not participate. Plex ↔ Finance candidate integration passed in both directions on all four sides and unequal-size corners. Usage pairing and physical mixed-DPI/virtual-desktop switching remain unverified. Existing playback protection, activity history, and in-app updates are preserved.
+Percentages show overall usage on this PC, including other apps, and refresh every two seconds. Tdarr status remains independent of those readings. GPU usage reflects the busiest local GPU engine, including video encoding. A dash means the reading is unavailable or warming up; compatible Windows GPU performance counters are required. No vendor utility or administrator prompt is needed.
+
+Shared Glance snapping, Tdarr playback protection, viewing history, and self-installing updates remain available. Snapping requires compatible protocol v1 apps. Usage pairing and physical mixed-DPI/virtual-desktop switching remain unverified.
 
 ## Playback protection and history
 

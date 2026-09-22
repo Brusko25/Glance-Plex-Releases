@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.0 — 2026-09-21
+
+- Show live local CPU/GPU percentages beside Tdarr worker status, sampled off the UI thread every two seconds.
+
+- Show Working beside green CPU/GPU indicators and Idle beside red indicators; unconfirmed status stays Unknown.
+
+- Add the app icon and Glance Plex name to the widget header, remove the redundant idle subtitle, and enlarge the Tdarr CPU/GPU indicators.
+
 ## 2.1.0 — 2026-09-21
 
 - Add shared Glance widget snapping during dragging, with a default-on Widget option and cross-process discovery. Other apps need protocol v1 support.
