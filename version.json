@@ -1,8 +1,8 @@
 {
-  "version": "1.1.1",
-  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v1.1.1/Glance-Plex-v1.1.1-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v1.1.1/Glance-Plex-v1.1.1-Setup.exe",
-  "installer_sha256": "d6159a34286683f5580afc7163b1ccfe9efb13c3b032a5fc90353638d8fdbdd2",
-  "changelog": "Finance-style Options with navy cards, amber toggle switches, dark inputs, clear navigation, and a compact activity toolbar.",
-  "sha256": "00b9eb8eaa40b212fc597b5c1059f5a87b44983277f22fd47c0a67d48c37837d"
+  "version": "2.0.0",
+  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.0.0/Glance-Plex-v2.0.0-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.0.0/Glance-Plex-v2.0.0-Setup.exe",
+  "installer_sha256": "eaa0d512a280b15d6076d7c5e354f044e4e070927a3aff20ad5bf56db427d615",
+  "changelog": "Glance Plex 2.0: Finance-style Options, Tdarr playback protection, CPU/GPU indicators, local viewing history, configurable connections, and verified in-app updates.",
+  "sha256": "ee60e1ee55993092dc5462791ecefa43ec2d99d73f7c0620319d4c9a55b66b2d"
 }
