@@ -1,8 +1,8 @@
 {
-  "version": "2.1.0",
-  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.1.0/Glance-Plex-v2.1.0-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.1.0/Glance-Plex-v2.1.0-Setup.exe",
-  "installer_sha256": "375b14957d1a20b899a9023455b506c4c8c6b5f8cf0e4c06a2963c713999624f",
-  "changelog": "Glance Plex 2.1: shared snapping with compatible Glance widgets, a saved Widget toggle, and matching thin gray borders.",
-  "sha256": "3c3a369a0244d2fd9d75d97ab0e3f944abcd65a2aad65c9381eeabf7479e4ce5"
+  "version": "2.2.0",
+  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.0/Glance-Plex-v2.2.0-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.0/Glance-Plex-v2.2.0-Setup.exe",
+  "installer_sha256": "9f2a5ffc354171acbd8b5ecd4349cf039f6a9c9f9deda611df68603d0cee0f33",
+  "changelog": "Glance Plex 2.2: a cleaner widget header, larger Working/Idle indicators, and live local CPU/GPU percentages.",
+  "sha256": "363496bd6b2e1465108dd781d4da803ea446cea25a879976a40fb450ebd036fe"
 }
