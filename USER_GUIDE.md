@@ -2,7 +2,7 @@
 
 ## Install and connect
 
-Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **2.0.0 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
+Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **2.1.0 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
 
 Plex Media Server on this PC, signed in under the same Windows account, connects automatically at `http://127.0.0.1:32400`. Right-click the widget → **Options → Plex connection** to change the address or port, supply a server-owner token for a different account/server, and test the connection. Automatic Windows sign-in is restricted to loopback addresses. Manual tokens are encrypted for the current Windows account; use HTTPS for connections across untrusted networks.
 
@@ -50,3 +50,9 @@ Files beside the executable: `settings.json` (preferences), `plex-connection.jso
 Automatic Plex tokens are read from the Windows account's Plex registry settings at request time and are not saved. Tokens are sent only to the configured Plex endpoint; Tdarr receives its own API key. GitHub update checks/downloads receive no Plex activity, credentials, or settings. No viewing history is uploaded.
 
 If a test fails, verify the server is running, address/port and API key/token are correct, and Glance has matching Windows privileges. A zero encoder-access result while idle is inconclusive: start an encode and test again. Report issues through [GitHub Issues](https://github.com/Brusko25/Glance-Plex-Releases/issues); omit credentials and private viewer details.
+
+## Snap to other Glance widgets
+
+In **Options → Widget**, **Snap to Glance widgets** aligns nearby widget edges while dragging. It starts enabled, including after upgrading older settings. Turn it off for free dragging. Pull farther than 12 logical pixels from an edge to release it; release the mouse to save the final position.
+
+Both apps need shared snapping protocol v1. Older unmarked Glance versions do not participate. Locked widgets remain anchors; a widget with snapping off can still be an anchor for another app. Hidden, minimized, and other-desktop windows are excluded. Only the widget you drag moves. Options, previews, startup, and activity refreshes do not cause snapping.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.0 — 2026-09-21
+
+- Add shared Glance widget snapping during dragging, with a default-on Widget option and cross-process discovery. Other apps need protocol v1 support.
+
+- Match Glance Finance’s thin gray widget border and rounded corners.
+
+
 ## 2.0.0 — 2026-09-21
 
 - Promote the approved Finance-style interface to the Glance Plex 2.0 release.

@@ -8,35 +8,37 @@ Choose the installer or portable ZIP. Requires Windows 10/11 x64 compatible and 
 
 ## Screenshots
 
-Captured from **2.0.0**, using fictional activity and explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
+Captured from **2.1.0**, using fictional activity and explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
 
 **Live stream view with CPU/GPU worker lights**
 
-[![Sample Plex streams and Tdarr worker indicators](images/2.0.0/activity.png)](images/2.0.0/activity.png)
+[![Sample Plex streams and Tdarr worker indicators](images/2.1.0/activity.png)](images/2.1.0/activity.png)
 
 **Playback protection and adjustable resume delay**
 
-[![Glance Plex playback options](images/2.0.0/options.png)](images/2.0.0/options.png)
+[![Glance Plex playback options](images/2.1.0/options.png)](images/2.1.0/options.png)
 
 **Local viewing history**
 
-[![Fictional viewing records with times and durations](images/2.0.0/history.png)](images/2.0.0/history.png)
+[![Fictional viewing records with times and durations](images/2.1.0/history.png)](images/2.1.0/history.png)
 
 **Suspended encoders, idle server, and unavailable connection**
 
-[![Suspended Tdarr indicators](images/2.0.0/tdarr-paused.png)](images/2.0.0/tdarr-paused.png)
-[![Idle Plex server](images/2.0.0/idle.png)](images/2.0.0/idle.png)
-[![Unavailable Plex connection with last-known samples](images/2.0.0/offline.png)](images/2.0.0/offline.png)
+[![Suspended Tdarr indicators](images/2.1.0/tdarr-paused.png)](images/2.1.0/tdarr-paused.png)
+[![Idle Plex server](images/2.1.0/idle.png)](images/2.1.0/idle.png)
+[![Unavailable Plex connection with last-known samples](images/2.1.0/offline.png)](images/2.1.0/offline.png)
 
 **Connection setup and widget options**
 
-[![Tdarr server, API key and queue setup](images/2.0.0/tdarr-connection.png)](images/2.0.0/tdarr-connection.png)
-[![Plex connection setup](images/2.0.0/plex-connection.png)](images/2.0.0/plex-connection.png)
-[![Widget appearance and update options](images/2.0.0/widget-options.png)](images/2.0.0/widget-options.png)
+[![Tdarr server, API key and queue setup](images/2.1.0/tdarr-connection.png)](images/2.1.0/tdarr-connection.png)
+[![Plex connection setup](images/2.1.0/plex-connection.png)](images/2.1.0/plex-connection.png)
+[![Widget appearance and update options](images/2.1.0/widget-options.png)](images/2.1.0/widget-options.png)
 
-## New in 2.0.0
+## New in 2.1.0
 
-Glance Plex 2.0 brings together Tdarr playback protection, local viewing history, and verified in-app updates. Its Options window matches Glance Finance with navy cards, amber toggles, dark inputs, clear navigation, and a compact activity toolbar. Tighter header spacing, a top-right Check for updates button, and settings directly beneath the tabs keep the layout compact. All playback, connection and history controls remain available.
+Drag Plex beside other compatible Glance widgets to align their edges. **Snap to Glance widgets** is enabled by default in **Options → Widget**, with free dragging available when switched off. Locked widgets remain anchors. The widget also matches Finance’s thin gray border and rounded corners.
+
+Both apps need shared snapping protocol v1; older Glance versions without it do not participate. Plex ↔ Finance candidate integration passed in both directions on all four sides and unequal-size corners. Usage pairing and physical mixed-DPI/virtual-desktop switching remain unverified. Existing playback protection, activity history, and in-app updates are preserved.
 
 ## Playback protection and history
 
