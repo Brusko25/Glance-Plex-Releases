@@ -1,8 +1,8 @@
 {
-  "version": "2.0.0",
-  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.0.0/Glance-Plex-v2.0.0-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.0.0/Glance-Plex-v2.0.0-Setup.exe",
-  "installer_sha256": "eaa0d512a280b15d6076d7c5e354f044e4e070927a3aff20ad5bf56db427d615",
-  "changelog": "Glance Plex 2.0: Finance-style Options, Tdarr playback protection, CPU/GPU indicators, local viewing history, configurable connections, and verified in-app updates.",
-  "sha256": "ee60e1ee55993092dc5462791ecefa43ec2d99d73f7c0620319d4c9a55b66b2d"
+  "version": "2.1.0",
+  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.1.0/Glance-Plex-v2.1.0-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.1.0/Glance-Plex-v2.1.0-Setup.exe",
+  "installer_sha256": "375b14957d1a20b899a9023455b506c4c8c6b5f8cf0e4c06a2963c713999624f",
+  "changelog": "Glance Plex 2.1: shared snapping with compatible Glance widgets, a saved Widget toggle, and matching thin gray borders.",
+  "sha256": "3c3a369a0244d2fd9d75d97ab0e3f944abcd65a2aad65c9381eeabf7479e4ce5"
 }
