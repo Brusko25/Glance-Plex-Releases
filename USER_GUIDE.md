@@ -2,7 +2,7 @@
 
 ## Install and connect
 
-Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **1.1.1 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
+Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **2.0.0 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
 
 Plex Media Server on this PC, signed in under the same Windows account, connects automatically at `http://127.0.0.1:32400`. Right-click the widget → **Options → Plex connection** to change the address or port, supply a server-owner token for a different account/server, and test the connection. Automatic Windows sign-in is restricted to loopback addresses. Manual tokens are encrypted for the current Windows account; use HTTPS for connections across untrusted networks.
 
@@ -39,7 +39,7 @@ Right-click → **Options** organizes playback protection, Tdarr connection, Ple
 
 ## Updates and uninstall
 
-Glance checks public GitHub releases after startup and daily. Choose **Check for updates** from the widget/tray menu, or **Options → Widget → Close options and check for updates**. A newer version offers **Update now**. It downloads the matching installer for installed copies or ZIP for portable copies, verifies SHA-256 and the product/version, releases Glance's Tdarr pauses, saves preferences, closes, installs, and reopens. Updates require your click. If preparation fails, the app stays open. Download failures do not replace files; a failed portable replacement is rolled back.
+Glance checks public GitHub releases after startup and daily. Choose **Check for updates** from the widget/tray menu, or the **Check for updates** button at the top of Options. A newer version offers **Update now**. It downloads the matching installer for installed copies or ZIP for portable copies, verifies SHA-256 and the product/version, releases Glance's Tdarr pauses, saves preferences, closes, installs, and reopens. Updates require your click. If preparation fails, the app stays open. Download failures do not replace files; a failed portable replacement is rolled back.
 
 Settings, credentials, and history are not package targets. Reinstalling or uninstalling also preserves local data. You can still exit Glance and run a newer installer manually. Version 1.0.1 requires one manual upgrade to get the new updater. Changing from portable to installer uses a different folder; retain/copy your settings deliberately after exiting. Encrypted credentials cannot be moved to another Windows account.
 

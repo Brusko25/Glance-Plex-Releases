@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.0 — 2026-09-21
+
+- Promote the approved Finance-style interface to the Glance Plex 2.0 release.
+- Includes Tdarr playback protection, adjustable resume timing, CPU/GPU indicators, configurable connections, local activity history, and verified in-app updates.
+- Match Finance’s header and navigation spacing, with a top-right Check for updates button that protects unsaved option edits.
+- Remove redundant page introductions so settings cards sit directly beneath navigation.
+- Existing settings, history, and playback behavior are preserved.
+
+
 ## 1.1.1 — 2026-09-21
 
 - Redesign Options to match Glance Finance: navy panels, amber accents, rounded cards, and clear navigation.
