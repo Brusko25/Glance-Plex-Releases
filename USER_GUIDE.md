@@ -2,7 +2,7 @@
 
 ## Install and connect
 
-Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **2.2.0 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
+Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **2.2.1 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
 
 Plex Media Server on this PC, signed in under the same Windows account, connects automatically at `http://127.0.0.1:32400`. Right-click the widget → **Options → Plex connection** to change the address or port, supply a server-owner token for a different account/server, and test the connection. Automatic Windows sign-in is restricted to loopback addresses. Manual tokens are encrypted for the current Windows account; use HTTPS for connections across untrusted networks.
 
@@ -18,7 +18,7 @@ For a remote Tdarr server or inaccessible processes, uncheck immediate suspensio
 
 When matching playback disappears, the idle countdown defaults to **5 minutes**. Adjust it from 0 to 60 minutes. Playback returning resets the countdown; connection failures never count as idle. Paused Plex sessions count by default. Optional filters limit protection to transcoding or remote sessions, a minimum stream count, or exclude specific usernames. Turn off automatic pause to leave encoding running normally while retaining status lights.
 
-Queues already paused before Glance takes control remain paused. For queues Glance owns, it maintains its pause while playback qualifies and releases it after the delay. Avoid manually changing those same queues until Glance releases them. Closing Glance releases its local encoder suspensions and queue pauses. A separate helper also recovers local encoders if the widget exits unexpectedly or its heartbeat stops. If Tdarr is unavailable, queue recovery is saved and retried next launch; you can also unpause affected nodes in Tdarr. Do not delete recovery files while paused.
+Queues already paused before Glance takes control remain paused. For queues Glance owns, it maintains its pause while playback qualifies and releases it after the delay. Avoid manually changing those same queues until Glance releases them. Closing Glance releases its local encoder suspensions and queue pauses. A separate helper also recovers local encoders if the widget exits unexpectedly or its heartbeat stops. If Tdarr is unavailable, queue recovery is saved and retried next launch; you can also unpause affected nodes in Tdarr. Do not delete recovery files while paused. Brief file-access conflicts retain the last trusted command; a missing heartbeat for 20 seconds triggers recovery. The helper exits after about a minute with no pause requested and restarts when needed. During Windows shutdown, cleanup is bounded and does not cancel the shutdown; unavailable queues retain their recovery lease.
 
 ## Read the widget
 
@@ -33,7 +33,7 @@ Queues already paused before Glance takes control remain paused. For queues Glan
 
 Open **Options → Activity** for searchable user, title/episode, device, first/last observed time, observed playing duration, and state. Recording is on by default, retained for 90 days; choose 1–365 days, turn recording off, or clear it. Up to 10,000 records are retained and the newest 1,000 matching records are displayed.
 
-History is recorded locally only while Glance runs. Playing duration is an estimate from consecutive successful polls, excludes observed pauses, and does not count connection gaps, stopped-app time, or seeking as extra watching. Short sessions between polls can be missed. It is not a backfill of Plex's historical activity.
+History is recorded locally only while Glance runs. Playing duration is an estimate from consecutive successful polls, excludes observed pauses, and does not count connection gaps, stopped-app time, or seeking as extra watching. Short sessions between polls can be missed. It is not a backfill of Plex's historical activity. Session and state changes save immediately; routine playing progress and last-seen timestamps save at most once a minute and are flushed when Glance closes. A sudden power loss can still lose unsaved progress.
 
 ## Options and controls
 

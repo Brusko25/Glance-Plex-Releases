@@ -8,39 +8,39 @@ Choose the installer or portable ZIP. Requires Windows 10/11 x64 compatible and 
 
 ## Screenshots
 
-Captured from **2.2.0**, using fictional activity and sample hardware percentages, explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
+Captured from **2.2.1**, using fictional activity and sample hardware percentages, explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
 
 **Live stream view with CPU/GPU status and percentages**
 
-[![Sample Plex streams, Tdarr status and hardware percentages](images/2.2.0/activity.png)](images/2.2.0/activity.png)
+[![Sample Plex streams, Tdarr status and hardware percentages](images/2.2.1/activity.png)](images/2.2.1/activity.png)
 
 **Playback protection and adjustable resume delay**
 
-[![Glance Plex playback options](images/2.2.0/options.png)](images/2.2.0/options.png)
+[![Glance Plex playback options](images/2.2.1/options.png)](images/2.2.1/options.png)
 
 **Local viewing history**
 
-[![Fictional viewing records with times and durations](images/2.2.0/history.png)](images/2.2.0/history.png)
+[![Fictional viewing records with times and durations](images/2.2.1/history.png)](images/2.2.1/history.png)
 
 **Suspended encoders, idle server, and unavailable connection**
 
-[![Suspended Tdarr indicators](images/2.2.0/tdarr-paused.png)](images/2.2.0/tdarr-paused.png)
-[![Idle Plex server](images/2.2.0/idle.png)](images/2.2.0/idle.png)
-[![Unavailable Plex connection with last-known samples](images/2.2.0/offline.png)](images/2.2.0/offline.png)
+[![Suspended Tdarr indicators](images/2.2.1/tdarr-paused.png)](images/2.2.1/tdarr-paused.png)
+[![Idle Plex server](images/2.2.1/idle.png)](images/2.2.1/idle.png)
+[![Unavailable Plex connection with last-known samples](images/2.2.1/offline.png)](images/2.2.1/offline.png)
 
 **Connection setup and widget options**
 
-[![Tdarr server, API key and queue setup](images/2.2.0/tdarr-connection.png)](images/2.2.0/tdarr-connection.png)
-[![Plex connection setup](images/2.2.0/plex-connection.png)](images/2.2.0/plex-connection.png)
-[![Widget appearance and update options](images/2.2.0/widget-options.png)](images/2.2.0/widget-options.png)
+[![Tdarr server, API key and queue setup](images/2.2.1/tdarr-connection.png)](images/2.2.1/tdarr-connection.png)
+[![Plex connection setup](images/2.2.1/plex-connection.png)](images/2.2.1/plex-connection.png)
+[![Widget appearance and update options](images/2.2.1/widget-options.png)](images/2.2.1/widget-options.png)
 
-## New in 2.2.0
+## New in 2.2.1
 
-The widget now shows its app icon and **Glance Plex** name, with a cleaner idle view. Larger CPU and GPU rows show **Working** beside green lights and **Idle** beside red lights, plus live hardware percentages.
+Playback protection now tolerates brief file-access conflicts between the widget and its encoder guard. The guard retires after about a minute with nothing paused and restarts when protection is needed. Recovery-journal saves are retried after temporary write failures.
 
-Percentages show overall usage on this PC, including other apps, and refresh every two seconds. Tdarr status remains independent of those readings. GPU usage reflects the busiest local GPU engine, including video encoding. A dash means the reading is unavailable or warming up; compatible Windows GPU performance counters are required. No vendor utility or administrator prompt is needed.
+History saves immediately for session and state changes, with routine progress saved at most once a minute and flushed when the app closes. Settings and history writes are flushed before replacement. Windows shutdown uses a short cleanup without cancelling the shutdown; unfinished queue recovery remains saved for the next launch.
 
-Shared Glance snapping, Tdarr playback protection, viewing history, and self-installing updates remain available. Snapping requires compatible protocol v1 apps. Usage pairing and physical mixed-DPI/virtual-desktop switching remain unverified.
+CPU/GPU percentages, shared Glance snapping, playback options and verified in-app updates remain available. Percentages show this PC's overall usage, independently of Tdarr worker status. Snapping requires compatible protocol v1 apps. Usage pairing and physical mixed-DPI/virtual-desktop switching remain unverified.
 
 ## Playback protection and history
 

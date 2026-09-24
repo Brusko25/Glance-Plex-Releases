@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.1 — 2026-09-23
+
+- Keep the last trusted playback command during brief file-access failures, preventing those failures from resuming encoders and unpausing the Tdarr queue mid-playback. Allow brief startup file contention and retry pending recovery-journal saves.
+- Let the encoder guard exit after a minute with nothing paused, instead of running and rewriting its files every second until the app closes.
+- Save viewing history only when something changes, and playing progress at most once a minute, instead of rewriting the whole history file on every refresh.
+- Don't block Windows shutdown or restart; do a short cleanup instead.
+- Use a separate temporary file for each save and write settings, lease and history files through to disk before replacing them; handle unreadable Tdarr settings and a failed "Open Plex" gracefully.
+
 ## 2.2.0 — 2026-09-21
 
 - Show live local CPU/GPU percentages beside Tdarr worker status, sampled off the UI thread every two seconds.
