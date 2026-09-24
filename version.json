@@ -1,8 +1,8 @@
 {
-  "version": "2.2.0",
-  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.0/Glance-Plex-v2.2.0-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.0/Glance-Plex-v2.2.0-Setup.exe",
-  "installer_sha256": "9f2a5ffc354171acbd8b5ecd4349cf039f6a9c9f9deda611df68603d0cee0f33",
-  "changelog": "Glance Plex 2.2: a cleaner widget header, larger Working/Idle indicators, and live local CPU/GPU percentages.",
-  "sha256": "363496bd6b2e1465108dd781d4da803ea446cea25a879976a40fb450ebd036fe"
+  "version": "2.2.1",
+  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.1/Glance-Plex-v2.2.1-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.1/Glance-Plex-v2.2.1-Setup.exe",
+  "installer_sha256": "8d61315491383893e7b42eecb524764b212aa83f7f023aa15fd13a2cf29c1964",
+  "changelog": "Glance Plex 2.2.1: more reliable Tdarr protection, fewer history writes, durable saves and bounded Windows shutdown cleanup.",
+  "sha256": "f3c1f64cd288601229a46e5825ea06fceb9a3e1c6b22bec828a40ad56b4eea01"
 }
