@@ -2,7 +2,7 @@
 
 ## Install and connect
 
-Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **2.2.1 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
+Use Windows 10/11 x64 compatible with .NET Framework 4.8 or newer. Download the **2.2.2 installer or Windows ZIP** from [the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest). The per-user installer offers desktop and Windows startup shortcuts. The portable ZIP must be fully extracted into a writable folder. Builds are unsigned.
 
 Plex Media Server on this PC, signed in under the same Windows account, connects automatically at `http://127.0.0.1:32400`. Right-click the widget → **Options → Plex connection** to change the address or port, supply a server-owner token for a different account/server, and test the connection. Automatic Windows sign-in is restricted to loopback addresses. Manual tokens are encrypted for the current Windows account; use HTTPS for connections across untrusted networks.
 

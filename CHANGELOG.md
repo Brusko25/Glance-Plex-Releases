@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.2 — 2026-09-24
+
+- Fix a crash while exiting: widget resource cleanup is safe when Windows Forms and the application scope both dispose the widget.
+- Handle an already-cleared tray menu and dispose the owned icon only once.
+- Add non-preview regression checks for repeated disposal and a missing tray menu.
+
 ## 2.2.1 — 2026-09-23
 
 - Keep the last trusted playback command during brief file-access failures, preventing those failures from resuming encoders and unpausing the Tdarr queue mid-playback. Allow brief startup file contention and retry pending recovery-journal saves.

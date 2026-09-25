@@ -8,33 +8,37 @@ Choose the installer or portable ZIP. Requires Windows 10/11 x64 compatible and 
 
 ## Screenshots
 
-Captured from **2.2.1**, using fictional activity and sample hardware percentages, explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
+Captured from **2.2.2**, using fictional activity and sample hardware percentages, explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
 
 **Live stream view with CPU/GPU status and percentages**
 
-[![Sample Plex streams, Tdarr status and hardware percentages](images/2.2.1/activity.png)](images/2.2.1/activity.png)
+[![Sample Plex streams, Tdarr status and hardware percentages](images/2.2.2/activity.png)](images/2.2.2/activity.png)
 
 **Playback protection and adjustable resume delay**
 
-[![Glance Plex playback options](images/2.2.1/options.png)](images/2.2.1/options.png)
+[![Glance Plex playback options](images/2.2.2/options.png)](images/2.2.2/options.png)
 
 **Local viewing history**
 
-[![Fictional viewing records with times and durations](images/2.2.1/history.png)](images/2.2.1/history.png)
+[![Fictional viewing records with times and durations](images/2.2.2/history.png)](images/2.2.2/history.png)
 
 **Suspended encoders, idle server, and unavailable connection**
 
-[![Suspended Tdarr indicators](images/2.2.1/tdarr-paused.png)](images/2.2.1/tdarr-paused.png)
-[![Idle Plex server](images/2.2.1/idle.png)](images/2.2.1/idle.png)
-[![Unavailable Plex connection with last-known samples](images/2.2.1/offline.png)](images/2.2.1/offline.png)
+[![Suspended Tdarr indicators](images/2.2.2/tdarr-paused.png)](images/2.2.2/tdarr-paused.png)
+[![Idle Plex server](images/2.2.2/idle.png)](images/2.2.2/idle.png)
+[![Unavailable Plex connection with last-known samples](images/2.2.2/offline.png)](images/2.2.2/offline.png)
 
 **Connection setup and widget options**
 
-[![Tdarr server, API key and queue setup](images/2.2.1/tdarr-connection.png)](images/2.2.1/tdarr-connection.png)
-[![Plex connection setup](images/2.2.1/plex-connection.png)](images/2.2.1/plex-connection.png)
-[![Widget appearance and update options](images/2.2.1/widget-options.png)](images/2.2.1/widget-options.png)
+[![Tdarr server, API key and queue setup](images/2.2.2/tdarr-connection.png)](images/2.2.2/tdarr-connection.png)
+[![Plex connection setup](images/2.2.2/plex-connection.png)](images/2.2.2/plex-connection.png)
+[![Widget appearance and update options](images/2.2.2/widget-options.png)](images/2.2.2/widget-options.png)
 
-## New in 2.2.1
+## New in 2.2.2
+
+Fixes an exception when exiting the widget: closing its window and leaving the main application scope could dispose the same tray menu twice. Resource cleanup now runs once and also handles an already-cleared tray menu.
+
+## Included from 2.2.1
 
 Playback protection now tolerates brief file-access conflicts between the widget and its encoder guard. The guard retires after about a minute with nothing paused and restarts when protection is needed. Recovery-journal saves are retried after temporary write failures.
 
