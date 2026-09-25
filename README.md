@@ -8,37 +8,42 @@ Choose the installer or portable ZIP. Requires Windows 10/11 x64 compatible and 
 
 ## Screenshots
 
-Captured from **2.2.2**, using fictional activity and sample hardware percentages, explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
+Captured from **2.2.3**, using fictional activity and sample hardware percentages, explicitly labeled SAMPLE PREVIEW/PREVIEW. Click for full size.
 
 **Live stream view with CPU/GPU status and percentages**
 
-[![Sample Plex streams, Tdarr status and hardware percentages](images/2.2.2/activity.png)](images/2.2.2/activity.png)
+[![Sample Plex streams, Tdarr status and hardware percentages](images/2.2.3/activity.png)](images/2.2.3/activity.png)
 
-**Playback protection and adjustable resume delay**
+**Playback protection, resume delay and what happens if Plex can't be reached**
 
-[![Glance Plex playback options](images/2.2.2/options.png)](images/2.2.2/options.png)
+[![Glance Plex playback options](images/2.2.3/options.png)](images/2.2.3/options.png)
 
 **Local viewing history**
 
-[![Fictional viewing records with times and durations](images/2.2.2/history.png)](images/2.2.2/history.png)
+[![Fictional viewing records with times and durations](images/2.2.3/history.png)](images/2.2.3/history.png)
 
 **Suspended encoders, idle server, and unavailable connection**
 
-[![Suspended Tdarr indicators](images/2.2.2/tdarr-paused.png)](images/2.2.2/tdarr-paused.png)
-[![Idle Plex server](images/2.2.2/idle.png)](images/2.2.2/idle.png)
-[![Unavailable Plex connection with last-known samples](images/2.2.2/offline.png)](images/2.2.2/offline.png)
+[![Suspended Tdarr indicators](images/2.2.3/tdarr-paused.png)](images/2.2.3/tdarr-paused.png)
+[![Idle Plex server](images/2.2.3/idle.png)](images/2.2.3/idle.png)
+[![Unavailable Plex connection with last-known samples](images/2.2.3/offline.png)](images/2.2.3/offline.png)
 
 **Connection setup and widget options**
 
-[![Tdarr server, API key and queue setup](images/2.2.2/tdarr-connection.png)](images/2.2.2/tdarr-connection.png)
-[![Plex connection setup](images/2.2.2/plex-connection.png)](images/2.2.2/plex-connection.png)
-[![Widget appearance and update options](images/2.2.2/widget-options.png)](images/2.2.2/widget-options.png)
+[![Tdarr server, API key and queue setup](images/2.2.3/tdarr-connection.png)](images/2.2.3/tdarr-connection.png)
+[![Plex connection setup](images/2.2.3/plex-connection.png)](images/2.2.3/plex-connection.png)
+[![Widget appearance and update options](images/2.2.3/widget-options.png)](images/2.2.3/widget-options.png)
 
-## New in 2.2.2
+## New in 2.2.3
 
-Fixes an exception when exiting the widget: closing its window and leaving the main application scope could dispose the same tray menu twice. Resource cleanup now runs once and also handles an already-cleared tray menu.
+- **Tdarr no longer stays paused when Plex disappears.** If Plex can't be reached while Tdarr is paused (server down or sign-in expired), Tdarr resumes after 10 minutes and you get a notification. Choose 30 minutes, 1 hour or Never in **Options → Playback**.
+- **Credentials stay off plain http outside your home network.** Plex tokens and Tdarr API keys are sent over http only to local, private-network or Tailscale addresses; use https for anything else.
+- **Clearer status.** A paused node that disconnects shows "waiting to reconnect" instead of a connection error, and an encoder guard that keeps stopping retries with a growing delay (up to 60 seconds) instead of every second.
+- Viewing history shows "Sep 21 8:00 PM" instead of running the date and time together, saves from two threads take turns, and the widget reuses its fonts.
 
-## Included from 2.2.1
+## Included from 2.2.2 and 2.2.1
+
+Exiting the widget no longer throws an exception: resource cleanup runs once and handles an already-cleared tray menu.
 
 Playback protection now tolerates brief file-access conflicts between the widget and its encoder guard. The guard retires after about a minute with nothing paused and restarts when protection is needed. Recovery-journal saves are retried after temporary write failures.
 
@@ -48,7 +53,7 @@ CPU/GPU percentages, shared Glance snapping, playback options and verified in-ap
 
 ## Playback protection and history
 
-- Pause local Tdarr encoders when Plex playback is detected; resume after five idle minutes by default, adjustable from 0–60 minutes. Includes recovery helper, queue selection, playback filters, and an off switch.
+- Pause local Tdarr encoders when Plex playback is detected; resume after five idle minutes by default, adjustable from 0–60 minutes. If Plex can't be reached, Tdarr resumes after 10 minutes by default. Includes recovery helper, queue selection, playback filters, and an off switch.
 - CPU/GPU worker status lights, configurable Plex/Tdarr addresses, credential fields, and read-only connection/access tests.
 - Searchable local activity history with observed viewing duration, retention, recording toggle and clear control.
 - **Update now** downloads, verifies, installs and restarts while preserving settings/history. Installed and portable copies are supported. Upgrade from 1.0.1 manually once to get this feature.

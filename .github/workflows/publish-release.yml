@@ -1,0 +1,47 @@
+name: Publish release
+# Creates a GitHub release in this repository with its own token. Push a temporary branch
+# named publish/v<version> made from main plus release-notes.md, SHA256SUMS.txt and every
+# asset it lists (optionally release-title.txt, and an empty file named prerelease). The
+# assets must match SHA256SUMS.txt, the release is created from main, an existing release
+# is never replaced, and the temporary branch is always deleted.
+on:
+  push:
+    branches: ['publish/v*']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PRODUCT: Glance Plex
+    steps:
+      - name: Check out the publish branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify assets and create the release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          tag="${BRANCH#publish/}"; version="${tag#v}"
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "::error::Invalid version in $BRANCH"; exit 1; }
+          for file in release-notes.md SHA256SUMS.txt; do [ -f "$file" ] || { echo "::error::Missing $file"; exit 1; }; done
+          # Package scripts write Windows line endings; compare without them, publish the file unchanged.
+          tr -d '\r' < SHA256SUMS.txt > "$RUNNER_TEMP/sums.txt"
+          mapfile -t assets < <(awk 'NF == 2 { print $2 }' "$RUNNER_TEMP/sums.txt")
+          [ "${#assets[@]}" -ge 1 ] || { echo "::error::SHA256SUMS.txt lists no assets"; exit 1; }
+          for asset in "${assets[@]}"; do
+            case "$asset" in *"$version"*) ;; *) echo "::error::$asset is not a $version asset"; exit 1;; esac
+            [ -f "$asset" ] || { echo "::error::Missing $asset"; exit 1; }
+          done
+          sha256sum -c "$RUNNER_TEMP/sums.txt"
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then echo "::error::$tag already exists. Published releases are never replaced."; exit 1; fi
+          title="$PRODUCT $version"; [ -s release-title.txt ] && title="$(head -n 1 release-title.txt | tr -d '\r')"
+          flags=(); [ -f prerelease ] && flags+=(--prerelease)
+          gh release create "$tag" --repo "$GITHUB_REPOSITORY" --target main --title "$title" --notes-file release-notes.md "${flags[@]}" "${assets[@]}" SHA256SUMS.txt
+      - name: Delete the publish branch
+        if: always()
+        shell: bash
+        run: git push origin --delete "${{ github.ref_name }}"
