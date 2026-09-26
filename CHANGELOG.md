@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.3.0 — 2026-09-26
+
+- Simpler Tdarr pausing: while anyone is watching Plex, playing or paused, Glance pauses every Tdarr node, including nodes that connect during playback, and resumes them after no one has watched for the resume delay (5 minutes by default; set 0 to resume at once). Node selection and the stream filters (transcoding only, remote only, minimum streams, ignored usernames) are gone, so a saved selection or filter can no longer leave nodes running during a stream.
+- Automatic pausing is on by default. Updating from 2.2.x turns it on once; you can turn it off again in Options → Playback and that choice is kept.
+- On a PC where Tdarr has never answered, Glance no longer starts its encoder guard just because someone is watching.
+- New app icon: a mint play button in a lavender ring on a black tile.
+
 ## 2.2.3 — 2026-09-25
 
 - If Plex can't be reached while Tdarr is paused (server down or sign-in expired), Tdarr resumes after 10 minutes and you get a notification. Choose 30 minutes, 1 hour or Never in Options → Playback. Before, Tdarr stayed paused until Plex came back.
