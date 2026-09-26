@@ -1,8 +1,8 @@
 {
-  "version": "2.2.2",
-  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.2/Glance-Plex-v2.2.2-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.2/Glance-Plex-v2.2.2-Setup.exe",
-  "installer_sha256": "3fdc37dc34299b6e889e9bffc7e7d04413aac2ba86942e13bcbbc22947da7000",
-  "changelog": "Glance Plex 2.2.2: fixes the exit crash by cleaning up widget resources once and safely handling an already-cleared tray menu.",
-  "sha256": "4958b51b1bcabb8cb1a7b597df0f53f37ac6bd58ec843977a98dccce27523019"
+  "version": "2.2.3",
+  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.3/Glance-Plex-v2.2.3-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.3/Glance-Plex-v2.2.3-Setup.exe",
+  "installer_sha256": "ffa36bdb001fa743f98585934c125a73a0ce62d6f763f9eb851edf2fdef3e64f",
+  "changelog": "Glance Plex 2.2.3: Tdarr resumes after 10 minutes without Plex; tokens are never sent over plain http outside your home network; clearer node and guard status.",
+  "sha256": "46c9b502c4a75b479a2b0874848b3e4895f5c5a0a6bb3d809d8feb41981d0783"
 }
