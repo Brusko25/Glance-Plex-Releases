@@ -1,8 +1,8 @@
 {
-  "version": "2.2.3",
-  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.3/Glance-Plex-v2.2.3-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.2.3/Glance-Plex-v2.2.3-Setup.exe",
-  "installer_sha256": "ffa36bdb001fa743f98585934c125a73a0ce62d6f763f9eb851edf2fdef3e64f",
-  "changelog": "Glance Plex 2.2.3: Tdarr resumes after 10 minutes without Plex; tokens are never sent over plain http outside your home network; clearer node and guard status.",
-  "sha256": "46c9b502c4a75b479a2b0874848b3e4895f5c5a0a6bb3d809d8feb41981d0783"
+  "version": "2.3.0",
+  "download_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.3.0/Glance-Plex-v2.3.0-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-Plex-Releases/releases/download/v2.3.0/Glance-Plex-v2.3.0-Setup.exe",
+  "installer_sha256": "277e9c02d0ed2c907bffa7c932e925f9ca3dd6475b029b0d141596847b5a8f23",
+  "changelog": "Glance Plex 2.3.0: any active Plex stream pauses every Tdarr node until no one is watching; new app icon.",
+  "sha256": "3c262dbea8827ddd232d77b7d21de8b2646a249b6a06fc9ec6434cba966ab151"
 }
