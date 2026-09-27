@@ -1,5 +1,7 @@
 # Glance Plex
 
+> **Final release.** Glance Plex 2.3.0 is the last standalone version. It keeps working, and the in-app update check won't offer anything newer. Glance Plex continues as a tile in [Glance Platform](https://github.com/Brusko25/Glance-Platform-Releases).
+
 A compact Windows widget showing who is watching Plex and what they are playing, with optional Tdarr playback protection and local viewing history.
 
 **[Download the latest release](https://github.com/Brusko25/Glance-Plex-Releases/releases/latest)** · [Setup guide](USER_GUIDE.md) · [Report an issue](https://github.com/Brusko25/Glance-Plex-Releases/issues)
